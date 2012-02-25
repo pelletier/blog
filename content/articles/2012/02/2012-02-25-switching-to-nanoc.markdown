@@ -24,7 +24,8 @@ make a few changes I wanted to do for a while. I began by relocating some files
 and creating a year / month directory structure for the articles on the blog.
 Then I ran some scripts to tweak of some things in the source code (URLs,
 headings and so on) and wrote a few lines of Ruby code to run some optimizers
-(such as YUI compressor). Here is the final [Routes file][].
+(such as YUI compressor). Here is the final [Routes file][]. If you want more,
+the [website source][] is on GitHub.
 
 Finally, I decided to implement the only feature I was missing from the time
 I was using a dynamic platform ([Wordpress][] especially). It's the ability to
@@ -91,10 +92,11 @@ server {
 ~~~
 
 Now I can quickly fix something. The drawback is that your need a server, not
-just a simple FTP static host. I would like to try this using only GitHub
-Pages and Heroku, but I use YUI compressor, which requires Java, and I'm not
-sure that we can use both Java and Ruby on the same Heroku instance. To be
-investingaged.
+just a simple FTP static host. I would like to try this using only GitHub Pages
+and Heroku, but I use YUI compressor, which requires Java, and I'm not sure
+that we can use both Java and Ruby on the same Heroku instance. To be
+investigated.
+
 
 [Jekyll]: http://ringce.com/hyde
 [Hyde]: http://ringce.com/hyde
@@ -108,3 +110,4 @@ investingaged.
 [post-receive hook]: http://help.github.com/post-receive-hooks/
 [build.rb]: https://github.com/pelletier/blog/blob/master/build.rb
 [Nginx]: http://nginx.org/
+[website source]: https://github.com/pelletier/blog/ 
