@@ -1,6 +1,5 @@
 ---
 title: FreeBSD, AFP, Time Machine
-layout: post
 ---
 
 About two years ago, I wrote [a post][] about setting up an AFP server to host
