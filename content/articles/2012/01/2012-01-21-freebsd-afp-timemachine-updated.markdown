@@ -40,7 +40,7 @@ want to share the folder `/home/thomas/tm/` as `Time machine` to the UNIX user
 ~~~
 
 (*For those who read the old post:* note the new options and the `cnidscheme`
-argument ; they are required!)
+argument; they are required!)
 
 Finally add the following to `/usr/local/etc/afpd.conf` (making the same
 assumptions as before):
