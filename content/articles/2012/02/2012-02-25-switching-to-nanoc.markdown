@@ -90,7 +90,8 @@ server {
 }
 ~~~
 
-Now I can quickly fix something. I would like to try this using only GitHub
+Now I can quickly fix something. The drawback is that your need a server, not
+just a simple FTP static host. I would like to try this using only GitHub
 Pages and Heroku, but I use YUI compressor, which requires Java, and I'm not
 sure that we can use both Java and Ruby on the same Heroku instance. To be
 investingaged.
