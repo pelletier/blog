@@ -8,7 +8,7 @@ a Time Machine backup on a FreeBSD box. However time passed and Netatalk (the
 software which provide the AFP server) and the AFP specfication evolved, making
 the first article outdated. So here is a brand new version based on the remarks
 [Jörg Wunsch][] and the commenters sent me. This configuration has been tester
-on a FreeBSD 8.2 running on VirtualBox, and a Mac OS 10.7 (Lion) client.
+on a FreeBSD 8.2 running on VirtualBox, and a Mac OS X 10.7 (Lion) client.
 
 
 ## On the FreeBSD server
