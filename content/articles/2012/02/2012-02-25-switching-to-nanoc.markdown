@@ -13,7 +13,7 @@ fitting my needs, and they all resulted in some more hacks.
 
 Then, I found [nanoc][].
 
-It is a really powerful static website generator written in Ruby. It is a bit
+I's a really powerful static website generator written in Ruby. It is a bit
 harder to get along with than the others, yet it turns out to be really
 powerful: it leverages Ruby to provide a DSL used to set up a clever [set of
 rules][] defining how your content will be compiled and where it will be placed
