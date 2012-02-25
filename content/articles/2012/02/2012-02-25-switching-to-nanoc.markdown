@@ -78,7 +78,7 @@ server {
 
         rewrite .* / break;
         proxy_pass http://127.0.0.1:9999;
-            proxy_set_header  X-Real-IP  $remote_addr;
+        proxy_set_header  X-Real-IP  $remote_addr;
     }
 
     location / {
