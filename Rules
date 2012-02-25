@@ -1,0 +1,136 @@
+#!/usr/bin/env ruby
+
+require 'time'
+
+
+# Do some preprocessing on articles: inject some attributes into them.
+preprocess do
+  items.each do |item|
+    # Make them articles if they are in this directory (I seriously don't want
+    # to type this each time a write a new one).
+    if item.identifier =~ %r{^/articles/(.*)$}
+      item[:kind] = 'article'
+
+      edited_stamp = item[:edited] or item[:edited_at]
+      if not edited_stamp.nil?
+        item[:edited_at] = Time.parse(edited_stamp)
+      end
+    end
+    # Add the :created_at attribute, based on the filename (thanks to Time.parse
+    # magic).
+    if item.identifier =~ %r{^/articles/\d{4}/\d{2}/(\d{4}-\d{2}-\d{2}).+$}
+      item[:created_at] = Time.parse($1)
+    end
+  end
+end
+
+
+# Compile the markdown-formatted articles.
+compile '/articles/*' do
+  filter :redcarpet, :renderer => HTMLCustomRenderer,
+                     :options => {
+                       :fenced_code_blocks => true,
+                       :no_intra_emphasis => true,
+                       :strikethrough => true
+                     }
+  layout 'post'
+  layout 'default'
+  filter :cache_buster
+end
+
+compile '/assets/css/*' do
+  if item[:extension] == 'sass'
+    filter :sass
+  end
+  filter :cache_buster
+  filter :rainpress
+end
+
+compile '/assets/js/*' do
+  filter :yui_compressor, :type => :js
+  filter :cache_buster
+end
+
+# Don't compile all the assets (prevent them from being yield in the 'default' layout).
+compile '/assets/*' do
+  if not item.binary?
+    filter :cache_buster
+  end
+end
+
+# Compile feeds.
+compile '/feeds/*' do
+  filter :erb
+  filter :rubypants
+  filter :cache_buster
+end
+
+# Sitemap
+compile 'sitemap' do
+  filter :erb
+end
+
+# Compile the rest of the files, using ERB and doing some filtering.
+compile '*' do
+  if item[:extension] == 'markdown'
+    filter :redcarpet, :renderer => HTMLCustomRenderer,
+                       :options => {
+                         :fenced_code_blocks => true,
+                         :no_intra_emphasis => true,
+                         :strikethrough => true
+                       }
+     layout 'page'
+  end
+  filter :erb
+  filter :relativize_paths, :type => :html
+  layout 'default'
+  filter :rubypants
+  filter :cache_buster
+end
+
+
+# Route the articles to the root of the website: this is a weblog, so no need
+# to have an articles subdirectory.
+route '/articles/*' do
+  # Change the identifier to match the old URL scheme:
+  #   /yyyy/mm/post-title/
+  item.identifier.gsub(%r{^/articles/(\d+)/(\d+)/\d+-\d+-\d+-(.+)/$}) do |match|
+    "/#{$1}/#{$2}/#{$3}/index.html"
+  end
+end
+
+# Serve the assets, and rename the SASS files to normal CSS files (they have been compiled
+# previously).
+route '/assets/*' do
+  fp = fingerprint(item[:filename])
+  if item[:extension] == 'sass'
+    item.identifier.chop + fp + '.css'
+  else
+    item.identifier.chop + fp + '.'+item[:extension]
+  end
+end
+
+# Serve feeds. Django's root is legacy of the Wordpress version.
+route '/feeds/django/' do 
+  "/feeds/django.xml"
+end
+route '/feeds/atom/' do
+  "/atom.xml"
+end
+route '/feeds/rss/' do
+  "/rss.xml"
+end
+
+# Route sitemap
+compile 'sitemap' do
+  item.identifier.chop + '.xml'
+end
+
+# Catch-all route for the remaining files, which are likely to be static pages.
+route '*' do
+  # Write item with identifier /foo/ to /foo/index.html
+  item.identifier + 'index.html'
+end
+
+
+layout '*', :erb

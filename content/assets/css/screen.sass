@@ -1,0 +1,402 @@
+$blue: #009ADE
+$normal: #353535
+
+html
+  background: url('../images/grain.png') repeat
+
+body
+  font-family: 'Crimson Text', serif
+  color: $normal
+  font-size: 1.2em
+
+h1, h2, h3
+  text-shadow: 1px 1px 1px #FFF
+  font-weight: normal
+
+a
+  color: $blue
+  text-decoration: none
+
+ul
+  list-style: square
+  margin-left: 2em
+
+ol
+  margin-left: 2em
+
+img
+  display: block
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  max-width: 700px
+
+code
+  border: 1px solid #CCC
+  background-color: #FAFAFA
+  padding: 1px 3px
+  white-space: nowrap
+
+pre
+  border: 1px solid #CCC
+  background-color: #FAFAFA
+  padding: 1px 3px
+  display: block
+  overflow: auto
+  font-size: 0.75em
+  margin-bottom: 2em
+  
+  code
+    border: none
+    background-color: none
+    padding: none
+    white-space: pre
+
+
+.post
+  max-width: 700px
+  margin-left: auto
+  margin-right: auto
+
+.inner
+  padding-top: 3em
+  padding-bottom: 4em
+
+.thin
+  background: url('../images/top_bg.png') repeat-x
+  height: 6px
+
+
+.footer_bar
+  padding-top: 16px
+  padding-bottom: 16px
+  padding-left: 2em
+  padding-right: 2em
+  background: url('../images/bottom_border.png') repeat-x
+
+.footer
+  color: #FBFBFB
+  background: url('../images/bottom_bg.png') repeat
+
+  h1, h2, h3 
+    text-shadow: none
+
+  a
+    color: #A3A3A3
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+.final_bar
+  margin-top: 0px
+  background: url('../images/end_border.png') repeat-x
+
+#logo
+  margin-bottom: 3em
+
+  h1
+    color: #353535
+    font-weight: normal
+    text-shadow: 1px 1px 1px #FFF
+
+  h2
+    color: #a3a3a3
+    font-weight: normal
+    margin-left: 2em
+    text-shadow: 1px 1px1px #FFF
+    font-size: 1.3em
+
+#about p
+  margin-left: 2em
+
+#latest_twitter
+  height: 67px
+  background-image: url('../images/birds.png')
+  background-repeat: no-repeat
+  padding-left: 70px
+  margin-bottom: 3em
+
+  .whole
+    background: #FFF
+    height: 67px
+
+  .content
+    padding-left: 5px
+    padding-right: 5px
+    font-size: 0.9em
+
+  .date
+    text-align: right
+    font-size: 0.8em
+
+    a
+      color: #a3a3a3
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+.ribbon
+  background-image: url('../images/ribbon.png')
+  background-repeat: no-repeat
+  display: block
+  width: 70px
+  height: 147px
+  position: absolute
+  top: 0px
+  right: 60px
+  float: right
+
+.contact
+  ul
+    text-align: right
+    list-style: none
+  
+  a
+    vertical-align: middle
+    line-height: 26px
+    padding-top: 8px
+    background-repeat: no-repeat
+    background-position: right center
+    min-height: 36px
+    padding-right: 40px
+    opacity: 0.5
+    text-decoration: none
+    display: block
+
+    &:hover
+      opacity: 1
+      text-decoration: none
+
+    span
+      text-decoration: none
+
+  .twitter
+    background-image: url('../images/twitter.png')
+
+  .mail
+    background-image: url('../images/mail.png')
+    padding-top: 10px
+
+  .im
+    background-image: url('../images/im.png')
+
+.copyright
+  text-align: center
+  margin-top: 2em
+  margin-bottom: 2em
+  font-size: 0.8em
+  opacity: 0.5
+
+  &:hover
+    opacity: 1
+
+
+/*** POST ***/
+
+.post
+  h1,h2,h3,h4,h5
+
+    a
+      color: #CACACA
+      text-decoration: none
+
+      &:hover
+        color: #AAA
+        text-decoration: none
+
+.post_title h1
+  margin-top: 1em
+  margin-bottom: 0.3em
+  line-height: 1em
+
+.date
+  text-shadow: 1px 1px 1px #FFF
+  color: #555
+
+.post_back 
+  position: absolute
+  top: 15px
+  margin-left: 40px
+  float: left
+  text-align: center
+  display: block
+
+  a
+    color: #CCC
+    font-weight: bold
+
+    &:hover
+      color: #353535
+
+.post
+  h2
+    margin: 0 0 0.5em
+    font-size: 1.5em
+    font-weight: bold
+  h3
+    margin: 0 0 1.286em
+    font-size: 1.167em
+    font-weight: bold
+  h4
+    margin: 0 0 1.5em
+    font-size: 1em
+  h5
+    margin: 0 0 1.8em
+    font-size: .834em
+  h6
+    margin: 0 0 2em
+    font-size: .75em
+  blockquote
+    padding: 0 1.5em
+    border-left: 8px solid #EEE
+
+    p
+
+      &:nth-last-child(2)
+        margin-bottom: 0
+
+      &:last-child
+        a
+          color: #CCC
+
+        &:before
+          content: '\2014 \00A0'
+          color: #CCC
+
+
+  pre
+    margin: 0 0 1.5em
+  p
+    margin: 0 0 1.5em
+  a:hover
+    text-decoration: underline
+  ul
+    margin-bottom: 1.5em
+  ol
+    margin-bottom: 1.5em
+  object
+    margin-bottom: 1.5em
+    display: block
+  embed
+    margin-bottom: 1.5em
+    display: block
+  
+  strong
+    line-height: 1em
+
+  .twitter-share-button
+    display: block
+    float: right
+    margin-left: 1em
+    margin-bottom: 1em
+
+  #imglegend
+    display: none
+    min-height: 50px
+    background: rgba(0,0,0, 0.5)
+    color: white
+    padding-left: 20px
+    padding-right: 20px
+    line-height: 50px
+    position: absolute
+
+
+/*** ARCHIVES ***/
+
+.archives
+  
+  .date
+    color: #353535
+    text-decoration: none
+    font-size: 0.8em
+    
+  h3:hover
+    background: #EEE
+
+
+/*** COMMENTS ***/
+
+#dsq-comments
+  font-size: 1em
+
+div.dsq-item-trackback
+  display: none
+
+span.dsq-subscribe-email img
+  position: relative
+  top: -2px
+
+div.dsq-options:hover
+  text-align: center
+  opacity: 1
+
+div.dsq-options
+  text-align: center
+  opacity: 0.2
+  -webkit-transition-property: opacity
+  -webkit-transition-duration: 1s
+  -moz-transition-property: opacity
+  -moz-transition-duration: 1s
+  transition-property: opacity
+  transition-duration: 1s
+
+#dsq-comments-title h3
+  display: none
+
+#dsq-form-area
+  margin-bottom: 5em
+  border-bottom: 2px dashed #ddd
+  padding-bottom: 2.4em
+
+a.dsq-post-report
+  color: orange
+
+div.dsq-comment-message
+  padding-left: 0em
+  padding-right: 1em
+
+div.clearfix
+  margin-top: 5em
+  border-top: 2px dashed #ddd
+  padding-top: 2em
+
+td.dsq-comment-header-meta
+  background-color: rgb(250,250,250)
+
+a.dsq-avatar.dsq-tt
+  background-color: #dfdfdf
+  padding-right: 3px
+
+div.dsq-comment-header-meta-wrapper
+  padding-top: 7px
+  padding-left: 1em
+
+img.dsq-moderator-star
+  position: relative
+  top: -9px
+  opacity: 0.5
+
+div.highlight pre
+  font-size: 1em
+  padding: 1em
+
+
+/*** Table of contents ***/
+
+/* This is a cheat concerning the table of contents h1 */
+
+
+div.toc
+  margin-bottom: 2.5em
+  position: relative
+  left: -2em
+
+  ul
+    margin-bottom: 0
+    padding-bottom: 0
+    margin-top: 0
+    padding-top: 0
+    list-style-type: none
+

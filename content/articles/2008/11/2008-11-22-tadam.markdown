@@ -1,0 +1,16 @@
+--- 
+wordpress_id: 59
+title: Tadam !
+wordpress_url: http://kiznet.fr/blog/2008/11/22/tadam/
+layout: post
+---
+
+Enfin ! Voilà c'est fait, comme vous pouvez vous en rendre compte, vous voici
+sur Kiznet.fr ! Au niveau hébergement, OVH et ses cgi, c'est pas encore ça,
+mais ça reste quand même du turbo par rapport au pages perso de Free (et puis
+en plus, c'est du Django, ce n'est plus du PHP avec Wordpress !) Dans la liste
+des choses qu'il reste à faire : Mettre des images, comme vous pouvez le voir,
+chaque post à la place pour une image, il faut encore que je règle cela.
+Étoffer la page "à propos". Rendre le tout conforme aux standards du W3C,
+sinon ça ne me conviendra jamais. Voilà, j'espère que vous appréciez tous ce
+nouveau tournant !

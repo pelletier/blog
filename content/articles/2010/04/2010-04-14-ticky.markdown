@@ -1,0 +1,12 @@
+--- 
+wordpress_id: 586
+title: Ticky
+wordpress_url: http://thomas.pelletier.im/?p=586
+layout: post
+---
+
+I just release the first version of [Ticky](http://ticky.im/), a free, simple
+and unobtrusive OS X application which helps you to manage your daily tasks.
+As it's my first complete
+[ObjC/Cocoa](http://developer.apple.com/technologies/mac/cocoa.html)
+application, I will probably write some posts on problems I have encountered.

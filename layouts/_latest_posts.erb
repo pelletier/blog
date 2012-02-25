@@ -1,0 +1,7 @@
+<ul class="latest">
+  <% @site.sorted_articles[0...6].each do |article| %>
+    <li>
+      <a href="<%= article.path %>"><%= article[:title] %></a>
+    </li>
+  <% end %>
+</ul>

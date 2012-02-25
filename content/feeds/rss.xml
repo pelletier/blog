@@ -1,0 +1,28 @@
+---
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>Thomas Pelletier</title>
+    <link>http://thomas.pelletier.im/</link>
+    <atom:link href="http://thomas.pelletier.im/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Personnal weblog of Thomas Pelletier</description>
+    <language>en-us</language>
+    <pubDate><%= $render_time.to_iso8601_time %></pubDate>
+    <lastBuildDate><%= $render_time.to_iso8601_time %></lastBuildDate>
+
+    <% sorted_articles.each do |article| %>
+    <item>
+        <title><%= article[:title] %></title>
+        <link>http://thomas.pelletier.im<%= article.path %></link>
+        <pubDate><%= article[:created_at].to_iso8601_time %></pubDate>
+        <author>Thomas Pelletier</author>
+        <guid>http://thomas.pelletier.im<%= article.path %></guid>
+        <description><%= CGI.escapeHTML(article.compiled_content(:snapshot => :pre)) %></description>
+    </item>
+    <% end %>
+
+  </channel> 
+</rss>
+

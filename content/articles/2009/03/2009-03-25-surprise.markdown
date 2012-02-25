@@ -1,0 +1,17 @@
+--- 
+wordpress_id: 26
+title: Surprise
+wordpress_url: http://kiznet.fr/blog/2009/03/25/surprise/
+layout: post
+---
+
+Je viens de voir qu'[au moins une
+personne](http://pvergain.wordpress.com/2009/02/08/quelques-articles-sur-des-frameworks-web-python-django-pylons-web2py-repozebfg-pyxer/)
+a lu ce que j'ai écris à propos de Django en regardant le rapport mensuel de
+Google Analytics à propos de Kiznet.fr.
+
+Il me semble que c'est la première fois que je suis cité quelque part, avec un
+peu de chance, cela se reproduira.
+
+Au passage, je suis en total manque d'identité numérique, enfin, un peu
+éparpillé on va dire. Il va falloir que je fasse quelque chose de ce côté là.

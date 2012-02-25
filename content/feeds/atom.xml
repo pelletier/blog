@@ -1,0 +1,29 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Thomas Pelletier</title>
+ <link href="http://thomas.pelletier.im/atom.xml" rel="self"/>
+ <link href="http://thomas.pelletier.im/"/>
+ <updated><%= $render_time.to_iso8601_time %></updated>
+ <id>http://thomas.pelletier.im/</id>
+ <author>
+   <name>Thomas Pelletier</name>
+   <email>thomas@pelletier.im</email>
+ </author>
+
+ {% for post in site.posts %}
+ <% sorted_articles.each do |article| %>
+ <entry>
+     <title><%= article[:title] %></title>
+     <link href="http://thomas.pelletier.im<%= article.path.chop %>"/>
+     <updated><%= article[:created_at].to_iso8601_time %></updated>
+     <id>http://thomas.pelletier.im<%= article.path.chop %></id>
+     <content type="html"><%= CGI.escapeHTML(article.compiled_content(:snapshot => :pre)) %></content>
+ </entry>
+ <% end %>
+
+</feed>
+
+ 

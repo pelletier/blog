@@ -1,0 +1,79 @@
+---
+title: Home
+---
+
+<div class="row" id="logo">
+    <div class="twelvecol">
+        <h1>Thomas Pelletier</h1>
+        <h2>A student's thoughts on IT.</h2>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="sixcol">
+        <!-- Twitter -->
+        <div id="latest_twitter">
+            <div class="whole">
+                <div class="content">
+                    Loading...
+                </div>
+                <div class="date"></div>
+            </div>
+        </div>
+        <!-- Lastest blog entries -->
+        <h3>Latest blog entries</h3>
+        <%= render '_latest_posts' %>
+    </div>
+    <div class="twocol empty">&nbsp;</div>
+    <div class="fourcol last" id="about">
+        <h3>About</h3>
+        <p>
+            <span id='old'>19</span>-year old
+            <a href="http://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles">French student</a>
+            fond of math and CS. I like spending my spare time building
+            websites with nice tools such. New
+            technologies and web services are some of my passions.  When I've
+            something I'd like to talk about, I write a post and publish it on
+            this website.
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        /* Load latest tweet */
+        $.ajax({
+            url: "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=thompelletier&count=1&include_rts=1&callback=?",
+            dataType: 'jsonp',
+            success: function(data){
+                var content = data[0];
+
+                var tweet = content['text'];
+                tweet = tweet.replace(/(https?:\/\/[^\s]+|www\.[^\s]+)/g, "<a href='$1'>$1</a>");
+                tweet = tweet.replace(/(?:^|\s)#([^\s]+)/g, "<a href='http://search.twitter.com/search?q=%23$1'> #$1</a> ");
+                tweet = tweet.replace(/@([^\s]+)/g, '<a href="http://twitter.com/$1">@$1</a>');
+                
+                $('#latest_twitter .content').html(tweet);
+                var date = new Date(content['created_at']);
+                var id = content['id_str'];
+                $('#latest_twitter .whole').hide();
+                $('#latest_twitter .date').html("\
+                    <a href='http://twitter.com/thompelletier/status/"+id+"'>\
+                        "+jQuery.timeago(date)+"\
+                    </a>");
+                $('#latest_twitter .whole').fadeIn();
+
+            },
+            error: function(){
+                $('#latest_twitter').fadeOut();
+            }
+        });
+
+        /* Please, don't tell me I'm that old. */
+        var now = new Date();
+        var bday = new Date(1992,10,31);
+        $("#old").html(Math.floor((now - bday)/31536000000));
+    });
+</script>

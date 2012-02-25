@@ -1,0 +1,23 @@
+--- 
+wordpress_id: 56
+title: LifeDo
+wordpress_url: http://kiznet.fr/blog/2008/11/22/lifedo/
+layout: post
+---
+
+Voici [LifeDo](http://lifedo.alwaysdata.net), ma dernière création (si tant
+est que l'on puisse nommer comme cela un site web de débutant). Le principe
+est simple, vous vous connectez avec votre [OpenID](http://www.openid.net), et
+c'est parti ! Vous pouvez directement ajouter / modifier /supprimer vos taches
+à accomplir. Le besoin de cette application est né d'une déception : je ne
+trouvais rien qui me donnait pleinement satisfaction (notamment à cause de
+l'authentification OpenID que je voulais absolument). J'ai donc décidé de
+créer le mien, pour pouvoir en plus acquérir un peu plus d'expérience avec
+Django. N'hésitez pas à poster ici même ou à envoyer par mail vos remarques
+(tant qu'elles sont constructives !) à propos de LifeDo. Le développement se
+poursuit toujours plus ou moins, et certaines (grosses) modifications sont à
+prévoir dans le futur. Pour ceux que ça intéresse (c'est écrit là bas aussi) :
+la source est **disponible** sur le [Google Code du
+projet](http://code.google.com/p/lifedo). Le site est hébergé chez Alwaysdata
+(que je remercie au passage) et est propulsé par Django. Voilà pour cette
+brève. Bonne journée !

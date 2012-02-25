@@ -1,0 +1,14 @@
+<%= render '_back' %>
+
+<div class="row post_title">
+    <div class="twelvecol">
+        <h1><%= @item[:title] %></h1>
+    </div>
+</div>
+
+<div class='row post'>
+    <div class="twelvecol">
+        <%= yield %>
+    </div>
+</div>
+

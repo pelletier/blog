@@ -1,0 +1,36 @@
+<%= render '_back' %>
+
+
+<div class="row post">
+    <div class="twelvecol">
+        <div class="post_title">
+            <h1><%= @item[:title] %> <a href="<%= @item.path %>">»</a></h1>
+        </div>
+        <p class="date">Published on <%= @item[:created_at].strftime("%B %d, %Y") %>.
+        <% if not @item[:edited_at].nil? %>
+        Last edited on <%= @item[:edited_at].strftime("%B %d, %Y") %>.
+        <% end %>
+        </p>
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
+
+        <%= yield %>
+    </div>
+</div>
+
+<div class="row post disqus">
+    <div class="twelvecol">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'kiznet';
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

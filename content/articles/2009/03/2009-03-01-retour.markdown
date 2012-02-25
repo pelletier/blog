@@ -1,0 +1,41 @@
+--- 
+wordpress_id: 30
+title: Retour
+wordpress_url: http://kiznet.fr/blog/2009/03/01/retour/
+layout: post
+---
+
+Bon. Enfin, le ventirad est arrivé vite (36 heures environ, merci
+[LDLC](http://www.ldlc.com/))et correctement installé (oui, parce que quand il
+n'est pas fixé correctement, ça refroidit moins bien, n'est-ce pas ?). En ce
+qui me concerne, je suis très heureux de ce nouveau ventirad, qui, pour son
+prix, refroidit beaucoup mieux que le ventirad de base de chez Intel (j'étais
+à 50°C idle, maintenant à 28/30 °C idle). Et surtout, il fait vraiment moins
+de bruit (de plus, son bruit de soufflerie, lorsqu'il tourne à plein régime,
+est plus reposant qu'autre chose).
+
+Je suis aussi très content de ma nouvelle carte graphique, une [nVidia 9600
+GSO de chez Gainward](http://www.gainward.com/main/vgapro.php?id=97). Bon, par
+contre, je l'avais commandé chez [CDiscount](http://www.cdiscount.com/) (super
+prix, 64€ au lieu d'une centaine chez les autres revendeurs). Les délais sont
+quand même vachement plus long que chez LDLC : un peu plus d'une semaine pour
+la livraison.
+
+Bref, tout marche, moi content.
+
+Pour en revenir à [l'avant dernier
+post](http://kiznet.fr/journal/2009/02/22/dns-alwaysdata/), là aussi, je
+totalement satisfait de leurs services (tant au niveau efficacité que
+disponibilité) et de l'ergonomie de leur page d'administration. Je suis en
+train de récolter les fonds afin de passer à un [pack
+10GO](http://www.alwaysdata.net/offers/shared/), pour deux raisons :
+
+ 1) Je commence à sérieusement manquer de place.
+ 2) En discutant sur le forum, Cyril, un des administrateur (que je remercie
+et admire pour sa rapidité et son efficacité de réponse sur le forum. Ça
+change de chez OVH !), a informé qu'ils comptaient réduire le nombre de packs
+gratuits à 1 par client. J'en utilise actuellement 4 pour ma part, et je vais
+donc devoir tout regrouper sur un seul compte (je galère déjà assez pour me
+payer 1 abonnement, alors plusieurs, même pas la peine ...).
+
+Voilà, c'est partit pour la collecte.

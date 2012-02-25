@@ -1,0 +1,31 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Thomas Pelletier</title>
+ <subtitle>Django-related posts</subtitle>
+ <link href="http://thomas.pelletier.im/feeds/django.xml" rel="self"/>
+ <link href="http://thomas.pelletier.im/"/>
+ <updated><%= $render_time.to_iso8601_time %></updated>
+ <id>http://thomas.pelletier.im/feeds/django</id>
+ <author>
+   <name>Thomas Pelletier</name>
+   <email>thomas@pelletier.im</email>
+ </author>
+
+    <% sorted_articles.each do |article| %>
+        <% if not article[:tags].nil? and article[:tags].include? "django" %>
+            <entry>
+                <title><%= article[:title] %></title>
+                <link href="http://thomas.pelletier.im<%= article.path.chop %>" />
+                <updated><%= article[:created_at].to_iso8601_time %></updated>
+                <id>http://thomas.pelletier.im<%= article.path.chop %></id>
+                <content type="html"><%= CGI.escapeHTML(article.compiled_content(:snapshot => :pre)) %></content>
+            </entry>
+        <% end %>
+    <% end %>
+
+</feed>
+
+ 

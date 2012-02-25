@@ -1,0 +1,115 @@
+---
+title: Kindle
+---
+
+Because I enjoy reading and love technology, I got an [Amazon
+Kindle](http://www.amazon.fr/dp/B0051QVF7A) for Christmas. So it has been
+6 days and I can say: it is great; and that is the first reason I am writing
+a blog post about it. The second is because I want to put my feedback online,
+for people who would like another piece of information before buying it.
+
+This blog post is not meant to be a detailed review of the Amazon Kindle:
+I only deal with some points which are import ant to me. Also I almost do not
+compare it with other ebook readers, because it has been done so many times and
+because I do not have enough knowledge of the other readers.
+
+## It is Amazon
+
+Being an Amazon product, it is obviously very well integrated with their store.
+
+Some people say it is a major drawback: most of the books you buy through the
+Kindle store are "protected" using DRMs (yet it seems like you can easily [deal
+with that
+issue](http://www.wired.com/gadgetlab/2011/01/how-to-strip-drm-from-kindle-e-books-and-others/),
+never tested that though), so you cannot do whatever you want with that. It is
+true, and I think we (readers) can all agree on the statement that they are
+hateful *per se*.
+
+However, when you buy an e-reader, you have two choices on that point: either
+you buy an independent device (such as
+a [Cybook](http://bookeen.com/en/cybook/odyssey) by Bookeen) or a device sold
+by a bookseller. In my opinion, the point is: on the one hand, if you buy the
+device of a bookstore, you will be able to read the DRM-free books plus the
+protected books sold by the company. On the other hand, on a device created by
+an independent company, you will only be able to reader non-protected books. At
+the end of the day, I am not sure you win by buying an independent ebook
+reader.
+
+**Edit:** This is what I thought. However, after a talk with
+[@brunobord](http://twitter.com/brunobord), I am now aware that independent
+readers can also read DRM-protected books. My question is now: why can't my
+kindle? Actually, my only try with a non-Amazon DRM-protected book was with
+a document bought on iTunes. It may be an issue specific to iTunes DRMs. To be
+investigated.
+
+Now there is the Choice: Amazon, Apple's iTunes, Barnes and Noble and so on.
+Which one? Well, I chooses Amazon because it is the place I usually buy my
+paper books, and they have a tremendous collection.
+
+## The object
+
+The pros and cons of the device itself have already been discussed in many
+places, and I think my visible enjoyment  tells everything on my opinion on the
+topic.
+
+Yet I was afraid it would not "feel right" in the hand while reading, because
+it is not as flexible as a paper book. However taking it in hand was really
+intuitive and it works well.
+
+In addition to this I would like to signal that it is important to me to also
+buy a cover: the Kindle seems to feel dirty and scratched. It also just looks
+[very
+nice](http://www.amazon.com/Marware-Atlas-Kindle-Touch-Cover/dp/B005HSG3JC/ref=sr_1_8?ie=UTF8&qid=1325324223&sr=8-8).
+
+## Make it roar
+
+When you register your Kindle online, Amazon creates you an @kindle.com email
+address. You can then send emails with documents attached (PDFs, Word's DOC
+files etc), with an optional subject of "convert". This process will both store
+the document on the Amazon website and send it to your device as soon as
+possible (i.e. when you turn on the Wi-Fi). To my mind it is incredibly
+powerful.
+
+In fact, the first thing I did was to write a [Python
+script](https://github.com/pelletier/dailykindle) to send a Kindle book
+(actually a MOBI file) built from a set of news feeds (RSS, atom). If you do
+not quite understand: it delivers the news every week or day directly to your
+kindle, for free.
+
+People interested in this script, feel free to contact me if you have anything
+to say about it!
+
+## The accents
+
+As you probably noticed, I am not a native English speaker. Actually I am
+French, which entails non-ASCII characters in almost every word. The problem
+is: the Kindle seems to default to ASCII encoding. On books you buy, it is
+obviously fine, but on self-made ones, you must be careful to specify the
+encoding (it has a perfect support for UTF-8).
+
+This problem hit me two times. The first one, when I wrote the first version of
+DailyKindle. The second one is when I wanted to read a DRM-free book bought on
+iTunes. Here is the little trick I used to fix the problem:
+
+The file was an EPUB, so basically just a ZIP file in disguise. After
+downloading [Kindlegen](http://www.amazon.com/gp/feature.html?docId=1000234621)
+(a must-have for any Kindle hacker), I ran the following commands in an OS
+X terminal:
+
+~~~ bash
+unzip mybook.epub -d mybook
+perl -e "s/<\/head>/<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=UTF-8\" \/><\/head>/g;" -pi $(find mybook/ -type f)
+cd mybook && zip -rTv9 ../mybook2.epub * && cd ..
+kindlegen mybook2.epub
+~~~
+
+There it is: I had a fully working MOBI file. I just had to send it to my
+Kindle email and I was ready to read.
+
+This really irritated me: not defaulting to UTF-8 really is disgraceful.
+
+## End note
+
+This is a really nice object and I really enjoy it. As shown, it has downsides,
+but nothing one cannot deal with. I recommend it to any reader who is not
+resistant to technology (which is really understandable).

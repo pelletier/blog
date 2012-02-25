@@ -1,0 +1,18 @@
+---
+title: Archives
+---
+
+<%= render "_back" %>
+
+<div class='row archives'>
+    <div class="twelvecol">
+      <% @site.sorted_articles.each do |article| %>
+        <h3>
+          <a href="<%= article.path %>" title="<%= article[:title] %>">
+            <%= article[:title] %>
+            <span class="date">(<%= article[:created_at].strftime("%B %d, %Y") %>)</span>
+          </a>
+        </h3>
+      <% end %>
+    </div>
+</div>
