@@ -81,7 +81,7 @@ to say about it!
 
 ## The accents
 
-As you probably noticed, I am not a native English speaker. Actually I am
+As you've probably noticed, I am not a native English speaker. Actually I am
 French, which entails non-ASCII characters in almost every word. The problem
 is: the Kindle seems to default to ASCII encoding. On books you buy, it is
 obviously fine, but on self-made ones, you must be careful to specify the

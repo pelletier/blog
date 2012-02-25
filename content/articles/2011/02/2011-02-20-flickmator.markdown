@@ -39,4 +39,4 @@ My point is, I think services should offer many diversified ways to allow their
 users to deal with their data the way they want to. Firstly it would create
 a sound relation between the two sides and secondly it could encourage people
 to create incredible new side-products and create a pleasant ecosystem around
-the initial service ; which would be rather exciting don't you think?
+the initial service; which would be rather exciting don't you think?
