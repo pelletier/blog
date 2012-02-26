@@ -1,5 +1,5 @@
 ---
-title: Switching to nanoc, and more.
+title: Switching to nanoc, and more
 ---
 
 I started using a static website generator about a year ago. I really don't
