@@ -1,2 +1,2 @@
 #!/bin/bash
-scp -r output/* pelletier.im:www/thomas/
+scp -r output/* pelletier.im:www/thomas
