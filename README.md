@@ -1,0 +1,2 @@
+    nanoc
+    ./deploy.sh
