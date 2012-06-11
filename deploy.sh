@@ -1,3 +1,3 @@
 #!/bin/bash
 nanoc compile
-scp -r output/* pelletier.im:www/thomas
+scp -r output/* ssh.pelletier.im:www/thomas
