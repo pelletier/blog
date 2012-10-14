@@ -5,27 +5,22 @@ title: Colophon
 This website is a set of static HTML pages and assets generated using
 [nanoc](http://nanoc.stoneship.org/), with nifty syntactical highlights by
 [Pygments](http://pygments.org/) and a few style sheets created with
-[SASS](http://sass-lang.com/).
+[SASS](http://sass-lang.com/). I also use a little hack described in
+a [dedicated post](/2012/02/switching-to-nanoc/) to edit the content directly on
+GitHub, usually to fix a couple of typos.
 
 It is served by an [Nginx](http://nginx.org/) instance on my
 [Fedora](http://fedoraproject.org/) machine which runs on the [Rackspace
-cloud](http://www.rackspacecloud.com/1333-0-3-3.html).
+cloud](http://www.rackspacecloud.com/1333-0-3-3.html). I also use
+[CloudFlare](https://www.cloudflare.com/) as a caching proxy in order to reduce
+the strain on the Rackspace instance and the used bandwidth (yes, technology
+choices driven by greed).
 
-All the text-based thing is done with ease thanks to [Vim](http://www.vim.org/)
-and a [customized
-configuration](https://github.com/pelletier/dotfiles/tree/master/vim) (based on
-[Steve Losh's](https://bitbucket.org/sjl/dotfiles/src/90a02d85b468/vim/)).
+All the text-based edition is done with ease thanks to
+[Vim](http://www.vim.org/) and a [customized
+configuration](https://github.com/pelletier/dotfiles/tree/master/vim). Feel free
+to take a look, learn and copy!
 
-My work flow is deeply based on my
-[Wo](https://github.com/pelletier/wo),
-[Capistrano](https://github.com/capistrano/capistrano) to automate specific
-tasks, [Mercurial](http://mercurial.selenic.com/) for source control,
-[Hg-Git](http://hg-git.github.com/) for [Git](http://git-scm.com/) redundancy
-and finally [Hg-publishall](https://bitbucket.org/pelletier/hg-publishall/) to
-keep them synced.
-
-That is a quite heavy tool set for such a modest website, but I enjoy working
-with nice software, and IT is a hobby for me, so time I spend playing with it
-*must* be somehow entertaining.
-
-If you have any question, you can find my email address below.
+The tool set used to be really heavier, however I really strive for simplicity
+on this project. If you have any ideas or sugestions, please shout! You can find
+my email adress in the footer of every pages of this website.
