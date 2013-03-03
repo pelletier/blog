@@ -17,12 +17,12 @@ index_filenames: [ 'index.html' ]
 # Whether or not to generate a diff of the compiled content when compiling a
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
-enable_output_diff: false
+enable_output_diff: true
 
 prune:
   # Whether to automatically remove files not managed by nanoc from the output
   # directory. For safety reasons, this is turned off by default.
-  auto_prune: false
+  auto_prune: true
 
   # Which files and directories you want to exclude from pruning. If you version
   # your output directory, you should probably exclude VCS directories such as
@@ -79,7 +79,7 @@ watcher:
 base_url: "http://thomas.pelletier.im"
 
 deploy:
-  public:
+  default:
     kind: rsync
-    dst:  "pelletier.im:/home/thomas/www/thomas"
+    dst:  "ssh.pelletier.im:/home/thomas/www/thomas"
     options: ['-avz']

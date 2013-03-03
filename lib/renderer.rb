@@ -51,7 +51,6 @@ class HTMLCustomRenderer < Redcarpet::Render::HTML
         last_level = head[:level]
       end
 
-      puts depth
       [0...depth].each do |x|
         toc_html << "</ul></li>"
       end
