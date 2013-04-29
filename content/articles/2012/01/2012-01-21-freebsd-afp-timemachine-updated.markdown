@@ -28,7 +28,7 @@ afpd_enable="YES"
 cnid_metad_enable="YES"
 ~~~
 
-(*For those who read the old post:* note the new `cnid_metad_enable` setting)
+*(For those who read the old post: note the new `cnid_metad_enable` setting)*
 
 It is time to add a line to `/usr/local/etc/AppleVolumes.default`. Assuming you
 want to share the folder `/home/thomas/tm/` as `Time machine` to the UNIX user
@@ -38,8 +38,8 @@ want to share the folder `/home/thomas/tm/` as `Time machine` to the UNIX user
 /home/thomas/tm/ "Time Machine" allow:thomas cnidscheme:dbd options:usedots,upriv,tm
 ~~~
 
-(*For those who read the old post:* note the new options and the `cnidscheme`
-argument; they are required!)
+*(For those who read the old post: note the new options and the `cnidscheme`
+argument; they are required!)*
 
 Finally add the following to `/usr/local/etc/afpd.conf` (making the same
 assumptions as before):
