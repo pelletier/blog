@@ -77,9 +77,3 @@ watcher:
   notify_on_compilation_failure: true
 
 base_url: "http://thomas.pelletier.im"
-
-deploy:
-  default:
-    kind: rsync
-    dst:  "ssh.pelletier.im:/home/thomas/www/thomas"
-    options: ['-avz']
