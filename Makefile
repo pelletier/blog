@@ -8,4 +8,4 @@ compile: output
 
 deploy: compile
 	cd output && git commit -a -m "Deploy `date`"
-	cd output && git push
+	cd output && git push -f
